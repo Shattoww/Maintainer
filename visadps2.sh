@@ -2,7 +2,10 @@
 
 cd /opt/mft/processors/visadps/incoming 
 
-DAY=$(date +%m%d)
+###Here we use parameter expansion to call the default DAY variable if no argument is specified.
+
+#DAY=$(date +%m%d)
+DAY=${1:-$(date +%m%d)}
 MONTHLY=$(date +%y%m)
 
 #list_commands=""
