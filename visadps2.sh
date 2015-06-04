@@ -222,7 +222,7 @@ do
   /usr/local/etc/BOFI-dps-extract.py -i /opt/mft/processors/visadps/incoming/$i.D$DAY | grep -v "FIRST CALIFORNIA" > /opt/mft/processors/visadps/bofi-reports/BOFI-VISA-DPS-$i.D$DAY
 done
 
-/usr/bin/find /opt/mft/processors/visadps/bofi-reports/BOFI* -mtime +45 -exec rm {} \;
+/bin/find /opt/mft/processors/visadps/bofi-reports/BOFI* -mtime +45 -exec rm {} \;
 
 # Extract META report data and dump into META outgoing folder and upload to META
 
